@@ -11,6 +11,7 @@ export class Servidor {
     constructor(){
         //atributo que se llama app donde almaceno la propiedad de express
         this.app = express()
+        this.llamarAuxiliares()
         this.atenderServicios()
 
 
@@ -43,6 +44,13 @@ export class Servidor {
 
 
     }
+    llamarAuxiliares(){
+    //Activo la recepcion de datos por el body de ña peticion 
+    this.app.use(express.json)
+
+
+    }
+
 
 
 }
