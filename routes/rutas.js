@@ -32,15 +32,15 @@ rutas.delete('/juana/v1/habitaciones/:id/', controladorHabitacion.eliminar)
 
 //rutas para los servicios de reservas
 //1° servidor esta ingresando reservas
-rutas.post('/juana/v1/ingresar-reserva/',controladorReserva )
+rutas.post('/juana/v1/ingresar-reserva/',controladorReserva.insertarReserva )
 
 //2°servidor esta buscando reserbas por id
-rutas.get('/juana/v1/buscar-reserva-por-id/', controladorReserva)
+rutas.get('/juana/v1/reserva/:id/', controladorReserva.BuscarReserva)
 
 //3° servidor editar reservas 
-rutas.put('/juana/v1/editar-reserva/', controladorReserva)
+rutas.put('/juana/v1/reserva/:id/', controladorReserva.EditarReserva)
 
 //4° servidor eliminando reservas 
-rutas.delete('/juana/v1/eliminando-reserva/', controladorReserva)
+rutas.delete('/juana/v1/reserva/:id/', controladorReserva.eliminarReserva)
 
 
