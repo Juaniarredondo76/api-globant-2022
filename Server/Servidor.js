@@ -5,12 +5,15 @@
 import express from 'express'
 //importar las rutas del Api
 import {rutas} from'../routes/rutas.js'
+//va a impotar la conexion conBD
+import { conectar } from '../database/conexion.js'
 
 export class Servidor {
 
     constructor(){
         //atributo que se llama app donde almaceno la propiedad de express
         this.app = express()
+        this.conectarconBd()
         this.llamarAuxiliares()
         this.atenderServicios()
 
@@ -41,6 +44,8 @@ export class Servidor {
     }
 
     conectarconBd(){
+
+        conectar()
 
 
     }
